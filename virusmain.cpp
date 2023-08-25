@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-
+#include <algorithm> // ослы забыли
 #ifdef __linux__
     #include <cstring>
 #endif
