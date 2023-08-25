@@ -15,3 +15,19 @@ g++ virusmain.cpp -o main
 ```bash
 ./main
 ```
+
+# Windows
+
+Для этого вам надо скачать mingw или можете через MSVC ( Visual studio ).
+
+Способ для mingw
+
+```bash
+g++ virusmain.cpp -o main
+```
+
+Затем введите
+
+```bash
+./main
+```
