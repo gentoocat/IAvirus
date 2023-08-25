@@ -29,5 +29,7 @@ g++ virusmain.cpp -o main
 Затем введите
 
 ```bash
-./main
+start main.exe
 ```
+
+Также есть собранные бинарники ( -static )
