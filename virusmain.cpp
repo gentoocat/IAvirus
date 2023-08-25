@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
-#include <algorithm> // ослы забыли
+#include <algorithm> // ослы добавили
+#include <locale> // типо добавлено
+
 #ifdef __linux__
     #include <cstring>
 #endif
@@ -21,8 +23,14 @@ int main() {
             system("zenity --warning --text=\"<span font_desc=\\\"Bold 20\\\">ВЫ ЗАРАЖЕНЫ ИА ВИРУСОМ.</span>\"");
         #elif _WIN32
             system("powershell -command \"Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('ВЫ ЗАРАЖЕНЫ ИА ВИРУСОМ.', 'Предупреждение', 'OK', [System.Windows.Forms.MessageBoxIcon]::Warning)\"");
+   system("pause");
         #endif
     }
-   
+    
+    #ifdef _WIN32
+        // локаль утф8 для пользователей ******s
+        setlocale(LC_ALL, ".UTF-8");
+    #endif
+
     return 0;
 }
